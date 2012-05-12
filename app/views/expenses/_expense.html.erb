@@ -1,0 +1,9 @@
+<tr id='expense_<%=expense.id%>'>
+  <td><%= expense.description %></td>
+  <td><%= expense.amount %></td>
+  <td><%= expense.created_at.strftime("%d %b, %Y") %></td>
+  <td>
+    <%= link_to "Edit", edit_expense_path(expense), :remote => true %> |
+    <%= link_to "Delete", expense_path(expense), :method => :delete, :confirm => "Are you sure you want to delete?" %>
+  </td>
+</tr>

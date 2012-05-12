@@ -13,3 +13,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.DS_Store
+.project
+*.tmproj
+chromedriver.log
+nbproject
+public/system/
+public/uploads/

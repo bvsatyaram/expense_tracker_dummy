@@ -1,0 +1,27 @@
+<h2>Track an expense</h2>
+<%= form_for @expense, :html => {:class => "expense_form"} do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description, :class => "expense_description" %>
+
+  <%= f.label :amount %>
+  <%= f.text_field :amount, :class => "expense_amount" %>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+<h2>Expenses Listing</h2>
+<% if @expenses.any? %>
+<table id='expenses'>
+  <thead>
+    <th class='expense_description'>Description</th>
+    <th class='expense_amount'>Amount</th>
+    <th>Date</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <%= render @expenses %>
+  </tbody>
+</table>
+<% else%>
+  <h4>No expenses tracked yet!</h4>
+<% end %>

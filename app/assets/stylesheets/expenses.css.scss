@@ -1,0 +1,22 @@
+// Place all the styles related to the Expenses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#expenses th {
+  text-align: left;
+}
+
+#expenses th.expense_description {
+  width: 200px;
+}
+
+#expenses th.expense_amount {
+  width: 60px;
+}
+.expense_form .expense_description {
+  width: 200px;
+}
+
+.expense_form .expense_amount {
+  width: 60px;
+}

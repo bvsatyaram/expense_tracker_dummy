@@ -1,0 +1,9 @@
+<tr id='expense_<%=@expense.id%>'>
+  <td colspan=4>
+    <%= form_for @expense, :html => {:class => "expense_form"} do |f| %>
+      <%= f.text_field :description, :class => "expense_description" %>
+      <%= f.text_field :amount, :class => "expense_amount" %>
+      <%= f.submit "Save" %>
+    <% end %>
+  <td>
+</tr>

@@ -11,3 +11,43 @@
  *= require_self
  *= require_tree .
 */
+
+/* Common */
+.field_with_errors {
+  display: inline;
+}
+
+.field_with_errors input {
+  border: 1px solid red;
+}
+
+
+/* Flash */
+#flash_container {
+  margin-top: -10px;
+  position: absolute;
+  text-align: center;
+  width: 1024px;
+  z-index: 48;
+}
+
+#flash_container .flash_msg{
+  background-color: #FBEC88;
+  border: 1px solid #FAD42E;
+  color: #363636;
+  padding: 0 10px;
+  position: relative;
+  display: inline-block;
+  @include border-radius(0 0 5px 5px);
+}
+
+#flash_container .flash_msg {
+  @include border-radius(5px);
+}
+
+#flash_container .flash_msg.error,
+.flash_container .flash_msg.error{
+  background-color: #FEF1EC;
+  border: 1px solid #CD0A0A;
+  color: #CD0A0A;
+}
